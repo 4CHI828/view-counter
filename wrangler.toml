@@ -1,0 +1,16 @@
+name = "view-counter"
+
+compatibility_date = "2025-11-29"
+main = "./src/index.ts"
+
+send_metrics = false
+workers_dev = true
+
+[placement]
+# https://developers.cloudflare.com/workers/configuration/smart-placement/#enable-smart-placement-via-wrangler
+mode = "smart"
+
+[[d1_databases]]
+binding = "ViewCounter"                              # i.e. available in your Worker on env.DB
+database_id = "ab448dcb-1d48-483f-addc-bee1fce7eaab"
+database_name = "ViewCounter"
